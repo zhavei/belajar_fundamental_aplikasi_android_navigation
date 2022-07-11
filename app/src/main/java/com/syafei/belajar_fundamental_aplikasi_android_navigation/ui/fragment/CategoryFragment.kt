@@ -6,7 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
-import com.syafei.belajar_fundamental_aplikasi_android_navigation.R
 import com.syafei.belajar_fundamental_aplikasi_android_navigation.databinding.FragmentCategoryBinding
 
 class CategoryFragment : Fragment() {
@@ -27,12 +26,22 @@ class CategoryFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.btnFragmentCategory.setOnClickListener { view ->
+        /**intent with bundle**/
+        /*binding.btnFragmentCategory.setOnClickListener { view ->
             val mBundle = Bundle()
             mBundle.putString(EXTRA_NAME, "bebek beteyoy")
             mBundle.putLong(EXTRA_STOCK, 7)
             view.findNavController().navigate(R.id.action_categoryFragment_to_detailCategoryFragment, mBundle)
+        }*/
+        /**intent with save args**/
+        binding.btnFragmentCategory.setOnClickListener { view ->
+            val toDetailFragment =
+                CategoryFragmentDirections.actionCategoryFragmentToDetailCategoryFragment()
+            toDetailFragment.name = "Life Style"
+            toDetailFragment.stock = 152
+            view.findNavController().navigate(toDetailFragment)
         }
+
     }
 
     override fun onDestroyView() {

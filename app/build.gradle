@@ -2,6 +2,10 @@ plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
     id 'kotlin-parcelize'
+
+    //save args pasanganya ada di build.gradle project
+    id "androidx.navigation.safeargs"
+
 }
 
 android {
@@ -54,6 +58,8 @@ dependencies {
     //nav component
     implementation 'androidx.navigation:navigation-fragment-ktx:2.5.0'
     implementation 'androidx.navigation:navigation-ui-ktx:2.5.0'
+
+
 
 
 }

@@ -21,4 +21,10 @@
         android:layout_marginBottom="16dp"
         android:text="category description" />
 
+    <Button
+        android:id="@+id/btn_detail_to_homey"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="to Home Fragment" />
+
 </LinearLayout>

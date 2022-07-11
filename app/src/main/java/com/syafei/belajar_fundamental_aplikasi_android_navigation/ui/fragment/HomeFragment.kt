@@ -31,8 +31,10 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.btnToCategoryHome.setOnClickListener {
-            Navigation.createNavigateOnClickListener(R.id.action_homeFragment_to_categoryFragment2)
+            /*Navigation.createNavigateOnClickListener(R.id.action_homeFragment_to_categoryFragment2)*/
+            view -> view.findNavController().navigate(R.id.action_homeFragment_to_categoryFragment2)
             Log.d("home fragment", "test Click Listener")
+
         }
 
         binding.btnToProfileHome.setOnClickListener {
